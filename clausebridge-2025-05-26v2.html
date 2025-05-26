@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClauseBridge – An AbilityMatrix Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --am-maroon: #8A5D63;
+      --am-maroon-light: #C6A1A5;
+      --am-dark-text: #333;
+      --am-light-text: #fff;
+      --am-muted-text: #5C5C5C;
+      --am-bg-light: #F8F9FA;
+      --am-bg-white: #fff;
+      --am-border: #DEE2E6;
+      --am-shadow: rgba(0, 0, 0, 0.06);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--am-dark-text); background: var(--am-bg-white); line-height: 1.7;
+    }
+    h1, h2, h3, h4 { margin: 0 0 .75rem; font-weight: 600; }
+    p { margin: 0 0 1rem; }
+    a { color: var(--am-maroon); text-decoration: none; transition: .3s; }
+    a:hover { color: #6b454b; text-decoration: underline; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 4rem 0; }
+    .section-title { font-size: 2.2rem; font-weight: 700; color: var(--am-maroon); margin-bottom: 1.5rem; text-align: center; }
+    .section-subtitle { font-size: 1.2rem; color: var(--am-muted-text); margin-bottom: 2rem; text-align: center; }
+    .section-image { display: block; margin: 2rem auto; max-width: 100%; height: auto; border-radius: 8px; }
+    header {
+      background: var(--am-bg-white); border-bottom: 1px solid var(--am-border);
+      box-shadow: 0 1px 3px var(--am-shadow); padding: 1rem 0;
+    }
+    .header-flex { display: flex; justify-content: space-between; align-items: center; width: 90%; max-width: 1100px; margin: 0 auto;}
+    .logo { font-size: 1.6rem; font-weight: 700; color: var(--am-maroon); }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+    nav a { color: var(--am-dark-text); font-weight: 500; }
+    nav a:hover { color: var(--am-maroon); }
+    .cta { background: var(--am-maroon); color: var(--am-light-text); text-align: center; padding: 3rem 0; }
+    .cta-btn { display: inline-block; background: var(--am-light-text); color: var(--am-maroon); padding: .9rem 2rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; transition: .3s; }
+    .cta-btn:hover { background: var(--am-maroon-light); color: var(--am-light-text); }
+    footer { background: var(--am-dark-text); color: var(--am-bg-light); text-align: center; padding: 2rem 0; font-size: .9rem; }
+
+    /* Styles for Key Features section */
+    .features{ padding:4rem 0; background:var(--am-bg-light); }
+    .features-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; }
+    .card{ background:var(--am-bg-white); border:1px solid var(--am-border); border-radius:8px;
+           box-shadow:0 4px 10px var(--am-shadow); padding:2rem; text-align:center; transition:.3s; }
+    .card:hover{ transform:translateY(-4px); box-shadow:0 7px 15px rgba(0,0,0,.08); }
+    .card-icon{ width:60px; margin-bottom:1rem; }
+    .card-title{ color:var(--am-maroon); font-size:1.4rem; margin-bottom:.5rem; }
+    .feature-description { font-size: 0.95rem; color: var(--am-muted-text); }
+
+    /* --- Responsive Adjustments --- */
+    @media (max-width: 768px) {
+        .header-flex {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        nav ul {
+            margin-top: 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        #headline > div > div[style*="flex-direction: row"],
+        #subheadline > div[style*="flex-direction: row"],
+        #pain > div[style*="flex-direction: row"] {
+            flex-direction: column !important;
+            align-items: center;
+        }
+        #headline > div > div > div,
+        #subheadline > div > div,
+        #pain > div > div {
+            max-width: 100% !important;
+            width: 100%;
+            text-align: center !important;
+        }
+        #headline img,
+        #subheadline img,
+        #pain img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #headline .section-title, #headline .section-subtitle,
+        #subheadline .section-title, #subheadline .section-subtitle,
+        #pain .section-title, #pain .section-subtitle {
+            text-align: center !important;
+        }
+        .container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .container[style*="padding-top: 1rem"] {
+             padding-top: 1rem !important;
+        }
+        .section-title {
+            font-size: 1.8rem;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+        }
+        /* Ensures the first section (ClauseBridge title area) is centered on mobile */
+        section.container[style*="padding-top: 1rem"] > div[style*="max-width: 720px"] {
+            text-align: center !important; /* Center the whole block */
+        }
+        section.container[style*="padding-top: 1rem"] .section-title,
+        section.container[style*="padding-top: 1rem"] .section-subtitle {
+            text-align: center !important; /* Explicitly center title and subtitle */
+        }
+        section.container[style*="padding-top: 1rem"] ul[style*="justify-content: flex-start"],
+        section.container[style*="padding-top: 1rem"] ul[style*="justify-content: center"] { /* Added to catch already centered */
+            justify-content: center !important;
+            padding-left: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.6rem;
+        }
+        .cta-btn {
+            padding: .8rem 1.5rem;
+            font-size: 1rem;
+        }
+        body {
+            line-height: 1.6;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-flex">
+    <a href="#" class="logo">ClauseBridge</a>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#subheadline">Learn More</a></li>
+        <li><a href="#cta">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="container" style="padding-top: 1rem; padding-bottom: 0;">
+  <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+    <h1 class="section-title" style="font-size: 2.4rem; font-weight: 700; color: var(--am-maroon); text-align: center;">ClauseBridge</h1>
+    <p class="section-subtitle" style="font-size: 1.25rem; font-weight: 400; color: var(--am-muted-text); text-align: center; margin-top: -1rem;">Automated Traceability from Contract to Completion</p>
+    <ul style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 0; margin-top: 1.5rem; list-style: none; font-size: 0.95rem; color: var(--am-muted-text);">
+      <li>Infrastructure</li>
+      <li>Transit</li>
+      <li>Pharma</li>
+      <li>Energy</li>
+      <li>Aerospace</li>
+      <li>Manufacturing</li>
+      <li>Defense</li>
+    </ul>
+  </div>
+</section>
+<section class="container" id="headline">
+  <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center; text-align: left;">
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 2rem; align-items: center; text-align: left;">
+      <div style="flex: 1; max-width: 600px; min-width: 280px;">
+        <h2 class="section-title" style="text-align: left; color: var(--am-dark-text);">Replace Clause Mapping Chaos with Traceability Your Clients Can Trust</h2>
+        <p class="section-subtitle" style="text-align: left;">Tracing the work you have completed to 5000 page contracts is slow, inconsistent, and hard to defend. ClauseBridge gives your team a systemized way to trace obligations to real work, fast.</p>
+      </div>
+      <div style="flex: 1; max-width: 500px; min-width: 280px;">
+        <img src="WomanInteractingwithFlowchartDisplay.png" alt="ClauseBridge mapping interface" style="width: 100%; border-radius: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/500x300/8A5D63/FFFFFF?text=Image+Not+Found';" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="container" id="subheadline">
+  <div style="display: flex; flex-direction: row; gap: 2rem; align-items: center; flex-wrap: wrap;">
+    <div style="flex: 1; max-width: 600px; min-width: 280px;">
+      <h2 class="section-title" style="text-align: left;">Clause fulfillment doesn't need to be a scramble.</h2>
+      <p class="section-subtitle" style="text-align: left;">
+        Every audit, milestone, or handover triggers a scramble to prove clause fulfillment.<br>
+        ClauseBridge connects contractual obligations to the people, processes, and proof points that fulfill them that satisfy them—
+        reducing weeks of spreadsheet and consultant work to minutes of expert validation.
+      </p>
+    </div>
+    <div style="flex: 1; max-width: 500px; min-width: 280px;">
+      <img src="AuditVerificationinProgress.png" alt="Traceability checklist" style="width: 100%; border-radius: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/500x350/C6A1A5/333333?text=Image+Not+Found';" />
+    </div>
+  </div>
+</section>
+
+  <section class="container" id="pain">
+  <div style="display: flex; flex-direction: row; gap: 2rem; align-items: center; flex-wrap: wrap;">
+    <div style="flex: 1; max-width: 600px; min-width: 280px;">
+      <h2 class="section-title" style="text-align: left; color: var(--am-dark-text);">Ditch the Spreadsheets. Skip the $500/hour Consultants. Trace With Confidence Across Industries.</h2>
+      <p class="section-subtitle" style="text-align: left; color: var(--am-dark-text);">From infrastructure and transit to pharma, energy, and aerospace, ClauseBridge gives your team the traceability backbone to move fast and prove compliance without the scramble.</p>
+    </div>
+    <div style="flex: 1; max-width: 500px; min-width: 280px;">
+      <img src="FinancialRejectionandConsultingServices.png" alt="Audit evidence export" style="width: 100%; border-radius: 8px;" onerror="this.onerror=null;this.src='https://placehold.co/500x320/8A5D63/FFFFFF?text=Image+Not+Found';" />
+    </div>
+  </div>
+</section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;font-size:2.2rem;font-weight:700;margin-bottom:3rem;">Key Features</h2>
+      <div class="features-grid">
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="32" fill="#C6A1A5"/>
+            <path d="M22 33l6 6 14-14" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 class="card-title">Smart Clause-to-Task Mapping</h3>
+          <p class="feature-description">AI suggests mappings while you maintain oversight and full manual control.</p>
+        </div>
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect width="64" height="64" rx="10" fill="#F8F9FA" stroke="#C6A1A5" stroke-width="3" />
+            <circle cx="32" cy="20" r="6" fill="#C6A1A5" />
+            <rect x="16" y="32" width="32" height="4" rx="2" fill="#C6A1A5" />
+            <rect x="16" y="42" width="32" height="4" rx="2" fill="#C6A1A5" />
+          </svg>
+          <h3 class="card-title">Vertical Integration</h3>
+          <p class="feature-description">Tie needs to test cases, SOPs, training, and KPIs in one cohesive record.</p>
+        </div>
+        <div class="card">
+          <svg class="card-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 20h48v30a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6V20z" fill="#C6A1A5"/>
+            <path d="M20 26h24v18H20z" fill="#fff"/>
+            <path d="M28 34h8" stroke="#C6A1A5" stroke-width="2" stroke-linecap="round"/>
+            <rect x="14" y="8" width="36" height="8" rx="4" fill="#8A5D63"/>
+          </svg>
+          <h3 class="card-title">Audit-Ready Traceability</h3>
+          <p class="feature-description">Generate instant evidence trails for regulators, auditors, and clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="cta" class="cta">
+    <div class="container">
+      <h2>Want to See ClauseBridge in Action?</h2>
+      <p>We're onboarding partners for early access deployments in Infrastructure, Transit, Manufacturing, Pharma and other domains.</p>
+      <a href="mailto:clausebridge@abilitymatrix.com" class="cta-btn">Request a Demo</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 ClauseBridge. Developed in partnership with AbilityMatrix.</p>
+    </div>
+  </footer>
+</body>
+</html>
