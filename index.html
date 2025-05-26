@@ -1,123 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClauseBridge – An AbilityMatrix Product</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClauseBridge – Contract Traceability</title>
   <style>
     :root {
-      --am-maroon: #8A5D63;
-      --am-maroon-light: #C6A1A5;
-      --am-dark-text: #333;
-      --am-light-text: #fff;
-      --am-muted-text: #5C5C5C;
-      --am-bg-light: #F8F9FA;
-      --am-bg-white: #fff;
-      --am-border: #DEE2E6;
-      --am-shadow: rgba(0, 0, 0, 0.06);
+      --primary-color: #8A5D63;
+      --text-color: #333;
+      --background: #fff;
+      --section-background: #f9f9f9;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--am-dark-text); background: var(--am-bg-white); line-height: 1.7;
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--background);
+      line-height: 1.6;
     }
-    h1, h2, h3, h4 { margin: 0 0 .75rem; font-weight: 600; }
-    p { margin: 0 0 1rem; }
-    a { color: var(--am-maroon); text-decoration: none; transition: .3s; }
-    a:hover { color: #6b454b; text-decoration: underline; }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 4rem 0; }
-    .section-title { font-size: 2.2rem; font-weight: 700; color: var(--am-maroon); margin-bottom: 1.5rem; text-align: center; }
-    .section-subtitle { font-size: 1.2rem; color: var(--am-muted-text); margin-bottom: 2rem; text-align: center; }
-    .section-image { display: block; margin: 2rem auto; max-width: 100%; height: auto; border-radius: 8px; }
-    header {
-      background: var(--am-bg-white); border-bottom: 1px solid var(--am-border);
-      box-shadow: 0 1px 3px var(--am-shadow); padding: 1rem 0;
+
+    .section {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
     }
-    .header-flex { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.6rem; font-weight: 700; color: var(--am-maroon); }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
-    nav a { color: var(--am-dark-text); font-weight: 500; }
-    nav a:hover { color: var(--am-maroon); }
-    .cta { background: var(--am-maroon); color: var(--am-light-text); text-align: center; padding: 3rem 0; }
-    .cta-btn { display: inline-block; background: var(--am-light-text); color: var(--am-maroon); padding: .9rem 2rem; border-radius: 6px; font-size: 1.1rem; font-weight: 600; transition: .3s; }
-    .cta-btn:hover { background: var(--am-maroon-light); color: var(--am-light-text); }
-    footer { background: var(--am-dark-text); color: var(--am-bg-light); text-align: center; padding: 2rem 0; font-size: .9rem; }
+
+    .hero {
+      background-color: var(--section-background);
+    }
+
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
   </style>
 </head>
 <body>
-  
 
-  
-<section class="container" style="padding-top: 1rem; padding-bottom: 0;">
-  <div style="max-width: 720px; margin: 0 auto; text-align: left;">
-    <h1 class="section-title" style="font-size: 2.4rem; font-weight: 700; color: var(--am-maroon); text-align: left;">ClauseBridge</h1>
-<p class="section-subtitle" style="font-size: 1.25rem; font-weight: 400; color: var(--am-muted-text); text-align: left; margin-top: -1rem;">Automated Traceability from Contract to Completion</p>
-    <ul style="display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 1rem; padding: 0; margin-top: 1.5rem; list-style: none; font-size: 0.95rem; color: var(--am-muted-text);">
-      <li>Infrastructure</li>
-      <li>Transit</li>
-      <li>Pharma</li>
-      <li>Energy</li>
-      <li>Aerospace</li>
-      <li>Manufacturing</li>
-      <li>Defense</li>
-    </ul>
-  </div>
-</section>
-
-  <section class="container" id="headline">
-  <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center; text-align: left;">
-    <div style="display: flex; flex-direction: column-reverse; gap: 2rem; align-items: center; text-align: left;">
-      <div style="flex: 1; max-width: 600px;">
-        <h2 class="section-title" style="text-align: left; color: var(--am-dark-text);">Replace Clause Mapping Chaos with Traceability Your Clients Can Trust</h2>
-        <p class="section-subtitle" style="text-align: left;">Tracing the work you have completed to 5000 page contracts is slow, inconsistent, and hard to defend. ClauseBridge gives your team a systemized way to trace obligations to real work, fast.</p>
-      </div>
-      <div style="flex: 1; max-width: 500px;">
-        <img src="WomanInteractingwithFlowchartDisplay.png" alt="ClauseBridge mapping interface" style="width: 100%; border-radius: 8px;" />
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section class="container" id="subheadline">
-  <div style="display: flex; flex-direction: row; gap: 2rem; align-items: center; flex-wrap: wrap;">
-    <div style="flex: 1; max-width: 600px;">
-      <h2 class="section-title" style="text-align: left;">Clause fulfillment doesn't need to be a scramble.</h2>
-      <p class="section-subtitle" style="text-align: left;">
-        Every audit, milestone, or handover triggers a scramble to prove clause fulfillment.<br>
-        ClauseBridge connects contractual obligations to the people, processes, and proof points that fulfill them that satisfy them—
-        reducing weeks of spreadsheet and consultant work to minutes of expert validation.
-      </p>
-    </div>
-    <div style="flex: 1; max-width: 500px;">
-      <img src="CollaborativePlanningandFocusedWork.png" alt="Traceability checklist" style="width: 100%; border-radius: 8px;" />
-    </div>
-  </div>
-</section>
-
-  <section class="container" id="pain">
-  <div style="display: flex; flex-direction: row; gap: 2rem; align-items: center; flex-wrap: wrap;">
-    <div style="flex: 1; max-width: 600px;">
-      <h2 class="section-title" style="text-align: left; color: var(--am-dark-text);">Ditch the Spreadsheets. Skip the $500/hour Consultants. Trace With Confidence Across Industries.</h2>
-      <p class="section-subtitle" style="text-align: left; color: var(--am-dark-text);">From infrastructure and transit to pharma, energy, and aerospace, ClauseBridge gives your team the traceability backbone to move fast and prove compliance without the scramble.</p>
-    </div>
-    <div style="flex: 1; max-width: 500px;">
-      <img src="https://github.com/clausebridge/clausebridge.github.io/blob/faa3855278e4c9be934399fb42d5f7969658e004/Audit%20Verification%20in%20Progress.png" alt="Audit evidence export" style="width: 100%; border-radius: 8px;" />
-    </div>
-  </div>
-</section>
-
-  <section id="cta" class="cta">
-    <div class="container">
-      <h2>Want to See ClauseBridge in Action?</h2>
-      <p>We're onboarding partners for early access deployments in Infrastructure, Transit, Manufacturing, Pharma and other domains.</p>
-      <a href="#contact" class="cta-btn">Request a Demo</a>
-    </div>
+  <section class="section hero">
+    <h1>Replace Clause Mapping Chaos with Traceability Your Clients Can Trust</h1>
+    <p>
+      Tracing your completed work to 5,000-page contracts is slow, inconsistent, and hard to defend.
+      <span class="highlight">ClauseBridge</span> gives your team a systemized way to trace obligations to real work - fast.
+    </p>
+    <p>
+      You’ve done the work. Now <em>prove</em> it.
+    </p>
+    <img src="Audit%20Verification%20in%20Progress.png" alt="Audit Verification Process">
   </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 ClauseBridge. Developed in partnership with AbilityMatrix.</p>
-    </div>
-  </footer>
+  <section class="section">
+    <h2>Full Contract Traceability - Without the Scramble</h2>
+    <p>
+      Every audit, milestone, or handover triggers a scramble that’s heavy on time and resources to prove clause fulfillment against your contract.
+      <span class="highlight">ClauseBridge</span> connects contractual obligations to the people, processes, and proof points that fulfill them - reducing weeks of spreadsheet and consultant work to minutes of expert validation.
+    </p>
+    <img src="Woman%20Interacting%20with%20Flowchart.png" alt="Visualizing Contract Flow">
+  </section>
+
+  <section class="section" style="background-color: var(--section-background);">
+    <h2>Ditch the Spreadsheets. Skip the $500/hour Consultants.</h2>
+    <p>
+      From infrastructure and transit to pharma, energy, and aerospace,
+      <span class="highlight">ClauseBridge</span> gives you full contract traceability - and lets you prove compliance without the scramble. Every time. Anytime.
+    </p>
+  </section>
+
 </body>
 </html>
